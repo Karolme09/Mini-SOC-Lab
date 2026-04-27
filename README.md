@@ -54,7 +54,7 @@
 
 ## Diagrama de la Arquitectura
 
-![Diagrama de red SOC Lab](Semana1/imagenes/diagramaRed_SOC.png)
+![Diagrama de red SOC Lab](Semana1/imagenes/DiagramaRed_SOC.png)
 
 ### Configuración de Red por VM
 
