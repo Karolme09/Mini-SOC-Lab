@@ -11,13 +11,16 @@
 ---
 
     MiniSOC-Lab/
+    ├── README.md
     ├── semana1/
-    │   ├── README.md                        ← Este archivo
     │   ├── imagenes/             
-    │       └── DiagramaRed_SOC.png        ← Arquitectura del laboratorio
+    │   │   └── DiagramaRed_SOC.png          ← Arquitectura del laboratorio
     │   └── rules/
     │       └── minisoc_lab.xml              ← 10 reglas de detección
-    ├── semana2/                             ← (próximamente)
+    ├── semana2/                             
+    │    └── evidencias/
+    │        ├── E6_Shuffle_dashboard.png
+    │        └── E7_Wazuh_Shuffle_Integration.png
     └── semana3/                             ← (próximamente)
 
 ---
@@ -45,7 +48,7 @@
 
 | VM | Hostname | IP Estática | Rol | RAM | Disco |
 |---|---|---|---|---|---|
-| wazuh-manager | wazuh-manager | 192.168.56.10 | SIEM + SOAR Central | 4096 MB | 50 GB|
+| wazuh-manager | wazuh-manager | 192.168.56.10 | SIEM + SOAR Central | 6194 MB | 50 GB|
 | linux-victim | linux-victim | 192.168.56.30 | Víctima Linux | 2048 MB | 20 GB |
 | win-victim | win-victim | 192.168.56.20 | Víctima Windows | 2048 MB | 64 GB |
 | kali-attacker | kali-attacker | 192.168.56.40 | Atacante controlado | 3099 MB | 80 GB 
@@ -92,7 +95,7 @@
 ### Semana 2: Shuffle SOAR y Escenarios de Ataque
 | Tarea | Estado |
 |---|---|
-| Instalación de Shuffle SOAR | ⏳ Pendiente |
+| Instalación de Shuffle SOAR | ✅ Completado |
 | Creación de playbooks de respuesta automatizada | ⏳ Pendiente |
 | Escenario 1: SSH Brute Force | ⏳ Pendiente |
 | Escenario 2: Port Scanning (Nmap) | ⏳ Pendiente |
@@ -119,6 +122,8 @@
 | E3 — Agente linux-victim activo | Captura de pantalla | ✅ |
 | E4 — Agente win-victim activo | Captura de pantalla | ✅ |
 | E5 — 10 reglas XML de detección | `minisoc_lab.xml` | ✅ |
+| E6 — Shuffle SOAR instalado | Captura dashboard Shuffle | ✅ |
+| E7 — Integración Wazuh → Shuffle | Captura Workflow Runs | ✅ |
 
 ---
 
