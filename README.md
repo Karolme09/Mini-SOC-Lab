@@ -23,7 +23,9 @@
     │        ├── E7_Wazuh_Shuffle_Integration.png
     │        ├── E8_PB-01 Bloqueo-IP.png
     │        ├── E9_PB-02 Alerta-Email.png
-    │        └── E10_PB-03 Ticket-Incidente.png
+    │        ├── E10_PB-03 Ticket-Incidente.png
+    │        ├── E11_Escenario 1 SSH Brute Force.png
+    │        └── E12_Escenerio 2 Creación de usuario nuevo.png
     └── semana3/                             ← (próximamente)
 
 ---
@@ -100,8 +102,8 @@
 |---|---|
 | Instalación de Shuffle SOAR | ✅ Completado |
 | Creación de playbooks de respuesta automatizada | ✅ Completado |
-| Escenario 1: SSH Brute Force | ⏳ Pendiente |
-| Escenario 2: Creación de usuario nuevo | ⏳ Pendiente |
+| Escenario 1: SSH Brute Force | ✅ Completado |
+| Escenario 2: Creación de usuario nuevo | ✅ Completado |
 | Escenario 3: Sudo Privilege Escalation | ⏳ Pendiente |
 | Escenario 4: PFile Integrity: modificar /etc/passwd | ⏳ Pendiente |
 | Escenario 5: Windows RDP Brute Force | ⏳ Pendiente |
@@ -120,16 +122,18 @@
 
 | Entregable | Archivo | Estado |
 |---|---|---|
-| E1 — Diagrama de arquitectura de red | `DiagramaRed_SOC` | ✅ |
+| E1 — Diagrama de arquitectura de red | DiagramaRed_SOC | ✅ |
 | E2 — Dashboard Wazuh activo | Captura de pantalla | ✅ |
 | E3 — Agente linux-victim activo | Captura de pantalla | ✅ |
 | E4 — Agente win-victim activo | Captura de pantalla | ✅ |
-| E5 — 10 reglas XML de detección | `minisoc_lab.xml` | ✅ |
+| E5 — 10 reglas XML de detección | minisoc_lab.xml | ✅ |
 | E6 — Shuffle SOAR instalado | Captura dashboard Shuffle | ✅ |
 | E7 — Integración Wazuh → Shuffle | Captura Workflow Runs | ✅ |
 | E8 — PB-01 Bloqueo-IP | Captura ejecución Shuffle | ✅ |
 | E9 — PB-02 Alerta-Email | Captura configuración del nodo | ✅ |
 | E10 — PB-03 Ticket-Incidente | Captura ticket creado | ✅ |
+| E11 — Escenario 1: SSH Brute Force | Captura Wazuh - Kali | ✅ |
+| E12 — Escenerio 2 Creación de usuario nuevo | Captura Wazuh - CLI Victim (SSH) | ✅ |
 
 ---
 
