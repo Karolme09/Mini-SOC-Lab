@@ -20,7 +20,10 @@
     ├── semana2/                             
     │    └── evidencias/
     │        ├── E6_Shuffle_dashboard.png
-    │        └── E7_Wazuh_Shuffle_Integration.png
+    │        ├── E7_Wazuh_Shuffle_Integration.png
+    │        ├── E8_PB-01 Bloqueo-IP.png
+    │        ├── E9_PB-02 Alerta-Email.png
+    │        └── E10_PB-03 Ticket-Incidente.png
     └── semana3/                             ← (próximamente)
 
 ---
@@ -96,7 +99,7 @@
 | Tarea | Estado |
 |---|---|
 | Instalación de Shuffle SOAR | ✅ Completado |
-| Creación de playbooks de respuesta automatizada | ⏳ Pendiente |
+| Creación de playbooks de respuesta automatizada | ✅ Completado |
 | Escenario 1: SSH Brute Force | ⏳ Pendiente |
 | Escenario 2: Port Scanning (Nmap) | ⏳ Pendiente |
 | Escenario 3: Web Attack / SQL Injection | ⏳ Pendiente |
@@ -124,6 +127,9 @@
 | E5 — 10 reglas XML de detección | `minisoc_lab.xml` | ✅ |
 | E6 — Shuffle SOAR instalado | Captura dashboard Shuffle | ✅ |
 | E7 — Integración Wazuh → Shuffle | Captura Workflow Runs | ✅ |
+| E8 — PB-01 Bloqueo-IP | Captura ejecución Shuffle | ✅ |
+| E9 — PB-02 Alerta-Email | Captura configuración del nodo | ✅ |
+| E10 — PB-03 Ticket-Incidente | Captura ticket creado | ✅ |
 
 ---
 
@@ -143,4 +149,5 @@ ssh victim@192.168.56.30
 
 - La VM wazuh-manager usa **enp0s3** para la red Host-Only y **enp0s8** para NAT 
 - El dashboard de Wazuh es accesible desde el host en: `https://192.168.56.10`
+- El Shuffle es accesible en: `https://192.168.56.10:3001`
 
