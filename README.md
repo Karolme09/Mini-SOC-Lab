@@ -101,10 +101,10 @@
 | Instalación de Shuffle SOAR | ✅ Completado |
 | Creación de playbooks de respuesta automatizada | ✅ Completado |
 | Escenario 1: SSH Brute Force | ⏳ Pendiente |
-| Escenario 2: Port Scanning (Nmap) | ⏳ Pendiente |
-| Escenario 3: Web Attack / SQL Injection | ⏳ Pendiente |
-| Escenario 4: Privilege Escalation | ⏳ Pendiente |
-| Escenario 5: Data Exfiltration | ⏳ Pendiente |
+| Escenario 2: Creación de usuario nuevo | ⏳ Pendiente |
+| Escenario 3: Sudo Privilege Escalation | ⏳ Pendiente |
+| Escenario 4: PFile Integrity: modificar /etc/passwd | ⏳ Pendiente |
+| Escenario 5: Windows RDP Brute Force | ⏳ Pendiente |
 
 ### Semana 3: Análisis, Métricas y Reporte Final
 | Tarea | Estado |
