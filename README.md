@@ -13,10 +13,13 @@
     MiniSOC-Lab/
     ├── README.md
     ├── semana1/
-    │   ├── imagenes/             
-    │   │   └── DiagramaRed_SOC.png          ← Arquitectura del laboratorio
-    │   └── rules/
-    │       └── minisoc_lab.xml              ← 10 reglas de detección
+    │   ├── evidencias/             
+    │   │   ├── E1_DiagramaRed_SOC.png          ← Arquitectura del laboratorio
+    │   │   ├── E2_Dashboard Wazuh activo.png
+    │   │   ├── E3_Agente linux-victim activo.png
+    │   │   ├── E4_Agente win-victim activo.png
+    │   │   ├── E4_Agente win-victim activo.png
+    │   │   └── E5_minisoc_lab.xml              ← 10 reglas de detección
     ├── semana2/                             
     │    └── evidencias/
     │        ├── E6_Shuffle_dashboard.png
@@ -27,7 +30,8 @@
     │        ├── E11_Escenario 1 SSH Brute Force.png
     │        ├── E12_Escenerio 2 Creación de usuario nuevo.png
     │        ├── E13_Escenario 3 Sudo Privilege Escalation.png
-    │        └── E14_Escenario 4 File Integrity violation.png
+    │        ├── E14_Escenario 4 File Integrity violation.png
+    │        └── E15_Escenario 5 RDP Brute Force.png
     └── semana3/                             ← (próximamente)
 
 ---
@@ -64,7 +68,7 @@
 
 ## Diagrama de la Arquitectura
 
-![Diagrama de red SOC Lab](Semana1/imagenes/DiagramaRed_SOC.png)
+![Diagrama de red SOC Lab](Semana1/evidencias/E1_DiagramaRed_SOC.png)
 
 ### Configuración de Red por VM
 
@@ -108,7 +112,7 @@
 | Escenario 2: Creación de usuario nuevo | ✅ Completado |
 | Escenario 3: Sudo Privilege Escalation | ✅ Completado |
 | Escenario 4: File Integrity: modificar /etc/passwd | ✅ Completado |
-| Escenario 5: Windows RDP Brute Force | ⏳ Pendiente |
+| Escenario 5: Windows RDP Brute Force | ✅ Completado |
 
 ### Semana 3: Análisis, Métricas y Reporte Final
 | Tarea | Estado |
@@ -138,6 +142,7 @@
 | E12 — Escenario 2: Creación de usuario nuevo | Captura Wazuh - CLI Victim (SSH) | ✅ |
 | E13 — Escenario 3: Sudo Privilege Escalation | Captura Wazuh - CLI Victim (SSH) | ✅ |
 | E14 — Escenario 4: File Integrity Violation | Captura Wazuh - CLI Victim (SSH) | ✅ |
+| E15 — Escenario 5: Windows RDP Brute Force | Captura Wazuh - Kali/Win-Victim (RDP) | ✅ |
 
 ---
 

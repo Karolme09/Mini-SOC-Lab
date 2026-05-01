@@ -1,0 +1,322 @@
+<!-- MiniSOC Laboratorio - Reglas de detección -->
+<!-- Autor: Karol Melissa Chacon Sanchez | Fecha: Abril 2026 -->
+
+<group name="minisoc_lab,">
+
+  <!-- R001: SSH Brute Force | MITRE ATT&CK T1110 -->
+  <rule id="100001" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>5760</if_matched_sid>
+    <description>R001 - Multiple SSH login failures - Brute force detected</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failures,</group>
+  </rule>
+
+  <!-- R002: New user account created | MITRE ATT&CK T1136 -->
+  <rule id="100002" level="8">
+    <if_sid>5901</if_sid>
+    <description>R002 - New user account created - Possible persistence</description>
+    <mitre>
+      <id>T1136</id>
+    </mitre>
+    <group>account_changes,</group>
+  </rule>
+
+  <!-- R003: Sudo privilege escalation | MITRE ATT&CK T1548 -->
+  <rule id="100003" level="8">
+    <if_sid>5402</if_sid>
+    <description>R003 - Sudo privilege escalation attempt detected</description>
+    <mitre>
+      <id>T1548</id>
+    </mitre>
+    <group>privilege_escalation,</group>
+  </rule>
+
+  <!-- R004: Exfiltration via AI Inference API | MITRE ATLAS AML.T0024 -->
+  <rule id="100004" level="10">
+    <if_sid>1002</if_sid>
+    <match>inference|api|model|predict</match>
+    <description>R004 - Exfiltration via AI Inference API - Possible data extraction from AI model</description>
+    <mitre>
+      <id>AML.T0024</id>
+    </mitre>
+    <group>exfiltration,ai_attack,</group>
+  </rule>
+
+  <!-- R005: LLM Data Leakage | MITRE ATLAS AML.T0057 -->
+  <rule id="100005" level="10">
+    <if_sid>31106</if_sid>
+    <match>prompt|llm|training_data|system_prompt</match>
+    <description>R005 - LLM Data Leakage - Sensitive data exposed via language model query</description>
+    <mitre>
+      <id>AML.T0057</id>
+    </mitre>
+    <group>exfiltration,ai_attack,</group>
+  </rule>
+
+  <!-- R006: Craft Adversarial Data | MITRE ATLAS AML.T0043 -->
+  <rule id="100006" level="10">
+    <if_sid>1002</if_sid>
+    <match>adversarial|poisoning|evasion|perturbation</match>
+    <description>R006 - Craft Adversarial Data - Attempt to manipulate AI model with adversarial inputs</description>
+    <mitre>
+      <id>AML.T0043</id>
+    </mitre>
+    <group>ai_attack,ml_attack_staging,</group>
+  </rule>
+
+  <!-- R007: Denial of AI Service | MITRE ATLAS AML.T0029 -->
+  <rule id="100007" level="12">
+    <if_sid>1002</if_sid>
+    <match>overload|flood|model_timeout|inference_error</match>
+    <description>R007 - Denial of AI Service - AI endpoint overloaded or disrupted</description>
+    <mitre>
+      <id>AML.T0029</id>
+    </mitre>
+    <group>ai_attack,denial_of_service,</group>
+  </rule>
+
+  <!-- R008: File integrity violation | MITRE ATT&CK T1565 -->
+  <rule id="100008" level="12">
+    <if_sid>550</if_sid>
+    <field name="file">/etc/passwd</field>
+    <description>R008 - File integrity violation - /etc/passwd modified</description>
+    <mitre>
+      <id>T1565</id>
+    </mitre>
+    <group>fim,</group>
+  </rule>
+
+  <!-- R009: Windows multiple login failures | MITRE ATT&CK T1110 -->
+  <rule id="100009" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>R009 - Windows multiple login failures - Possible RDP brute force</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failures,</group>
+  </rule>
+
+  <!-- R010: Create Proxy AI Model | MITRE ATLAS AML.T0005 -->
+  <rule id="100010" level="10">
+    <if_sid>5500</if_sid>
+    <match>proxy_model|model_copy|model_extraction|stolen_model</match>
+    <description>R010 - Create Proxy AI Model - Attempt to replicate or steal AI model</description>
+    <mitre>
+      <id>AML.T0005</id>
+    </mitre>
+    <group>ai_attack,ml_attack_staging,</group>
+  </rule>
+
+</group>
+wazuh@wazuh-manager:~$ client_loop: send disconnect: Connection reset
+
+C:\Users\chasa>ssh wazuh@192.168.56.10
+wazuh@192.168.56.10's password:
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.8.0-110-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May  1 07:29:23 PM UTC 2026
+
+  System load:             0.77
+  Usage of /:              67.5% of 47.07GB
+  Memory usage:            89%
+  Swap usage:              52%
+  Processes:               181
+  Users logged in:         1
+  IPv4 address for enp0s8: 10.0.3.15
+  IPv6 address for enp0s8: fd17:625c:f037:3:a00:27ff:fec9:4c1d
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+50 updates can be applied immediately.
+2 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Fri May  1 14:23:54 2026 from 192.168.56.1
+wazuh@wazuh-manager:~$ sudo systemctl status wazuh-indexer
+[sudo] password for wazuh:
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.se>
+     Active: active (running) since Fri 2026-05-01 14:50:59 U>
+       Docs: https://documentation.wazuh.com
+   Main PID: 93598 (java)
+      Tasks: 83 (limit: 7070)
+     Memory: 683.7M (peak: 1.3G swap: 860.8M swap peak: 1.1G)
+        CPU: 6min 15.670s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─93598 /usr/share/wazuh-indexer/jdk/bin/java -X>
+
+May 01 14:50:26 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:26 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:26 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:31 wazuh-manager systemd-entrypoint[93598]: May >
+May 01 14:50:31 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:33 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:33 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:33 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:33 wazuh-manager systemd-entrypoint[93598]: WARN>
+lines 1-20
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.se>
+     Active: active (running) since Fri 2026-05-01 14:50:59 U>
+       Docs: https://documentation.wazuh.com
+   Main PID: 93598 (java)
+      Tasks: 83 (limit: 7070)
+     Memory: 683.7M (peak: 1.3G swap: 860.8M swap peak: 1.1G)
+        CPU: 6min 15.670s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─93598 /usr/share/wazuh-indexer/jdk/bin/java -X>
+
+May 01 14:50:26 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:26 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:26 wazuh-manager systemd-entrypoint[93598]: WARN>
+May 01 14:50:31 wazuh-manager systemd-entrypoint[93598]: May >
+wazuh@wazuh-manager:~$ sudo grep -A 5 "syscheck" /var/ossec/etc/ossec.conf | head -20
+[sudo] password for wazuh:
+  <syscheck>
+    <disabled>no</disabled>
+
+    <!-- Frequency that syscheck is executed default every 12 hours -->
+    <frequency>43200</frequency>
+
+    <scan_on_start>yes</scan_on_start>
+
+    <!-- Generate alert when new file detected -->
+--
+  </syscheck>
+
+  <!-- Active response -->
+  <global>
+    <white_list>127.0.0.1</white_list>
+    <white_list>^localhost.localdomain$</white_list>
+wazuh@wazuh-manager:~$ sudo /var/ossec/bin/agent_control -r -u 001
+
+Wazuh agent_control: Restarting Syscheck/Rootcheck on agent: 001
+wazuh@wazuh-manager:~$
+wazuh@wazuh-manager:~$ cat /var/ossec/etc/rules/minisoc_lab.xml
+<!-- MiniSOC Laboratorio - Reglas de detección -->
+<!-- Autor: Karol Melissa Chacon Sanchez | Fecha: Abril 2026 -->
+
+<group name="minisoc_lab,">
+
+  <!-- R001: SSH Brute Force | MITRE ATT&CK T1110 -->
+  <rule id="100001" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>5760</if_matched_sid>
+    <description>R001 - Multiple SSH login failures - Brute force detected</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failures,</group>
+  </rule>
+
+  <!-- R002: New user account created | MITRE ATT&CK T1136 -->
+  <rule id="100002" level="8">
+    <if_sid>5901</if_sid>
+    <description>R002 - New user account created - Possible persistence</description>
+    <mitre>
+      <id>T1136</id>
+    </mitre>
+    <group>account_changes,</group>
+  </rule>
+
+  <!-- R003: Sudo privilege escalation | MITRE ATT&CK T1548 -->
+  <rule id="100003" level="8">
+    <if_sid>5402</if_sid>
+    <description>R003 - Sudo privilege escalation attempt detected</description>
+    <mitre>
+      <id>T1548</id>
+    </mitre>
+    <group>privilege_escalation,</group>
+  </rule>
+
+  <!-- R004: Exfiltration via AI Inference API | MITRE ATLAS AML.T0024 -->
+  <rule id="100004" level="10">
+    <if_sid>1002</if_sid>
+    <match>inference|api|model|predict</match>
+    <description>R004 - Exfiltration via AI Inference API - Possible data extraction from AI model</description>
+    <mitre>
+      <id>AML.T0024</id>
+    </mitre>
+    <group>exfiltration,ai_attack,</group>
+  </rule>
+
+  <!-- R005: LLM Data Leakage | MITRE ATLAS AML.T0057 -->
+  <rule id="100005" level="10">
+    <if_sid>31106</if_sid>
+    <match>prompt|llm|training_data|system_prompt</match>
+    <description>R005 - LLM Data Leakage - Sensitive data exposed via language model query</description>
+    <mitre>
+      <id>AML.T0057</id>
+    </mitre>
+    <group>exfiltration,ai_attack,</group>
+  </rule>
+
+  <!-- R006: Craft Adversarial Data | MITRE ATLAS AML.T0043 -->
+  <rule id="100006" level="10">
+    <if_sid>1002</if_sid>
+    <match>adversarial|poisoning|evasion|perturbation</match>
+    <description>R006 - Craft Adversarial Data - Attempt to manipulate AI model with adversarial inputs</description>
+    <mitre>
+      <id>AML.T0043</id>
+    </mitre>
+    <group>ai_attack,ml_attack_staging,</group>
+  </rule>
+
+  <!-- R007: Denial of AI Service | MITRE ATLAS AML.T0029 -->
+  <rule id="100007" level="12">
+    <if_sid>1002</if_sid>
+    <match>overload|flood|model_timeout|inference_error</match>
+    <description>R007 - Denial of AI Service - AI endpoint overloaded or disrupted</description>
+    <mitre>
+      <id>AML.T0029</id>
+    </mitre>
+    <group>ai_attack,denial_of_service,</group>
+  </rule>
+
+  <!-- R008: File integrity violation | MITRE ATT&CK T1565 -->
+  <rule id="100008" level="12">
+    <if_sid>550</if_sid>
+    <field name="file">/etc/passwd</field>
+    <description>R008 - File integrity violation - /etc/passwd modified</description>
+    <mitre>
+      <id>T1565</id>
+    </mitre>
+    <group>fim,</group>
+  </rule>
+
+  <!-- R009: Windows multiple login failures | MITRE ATT&CK T1110 -->
+  <rule id="100009" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>R009 - Windows multiple login failures - Possible RDP brute force</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>authentication_failures,</group>
+  </rule>
+
+  <!-- R010: Create Proxy AI Model | MITRE ATLAS AML.T0005 -->
+  <rule id="100010" level="10">
+    <if_sid>5500</if_sid>
+    <match>proxy_model|model_copy|model_extraction|stolen_model</match>
+    <description>R010 - Create Proxy AI Model - Attempt to replicate or steal AI model</description>
+    <mitre>
+      <id>AML.T0005</id>
+    </mitre>
+    <group>ai_attack,ml_attack_staging,</group>
+  </rule>
+
+</group>
