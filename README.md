@@ -26,7 +26,7 @@
     │        ├── E10_PB-03 Ticket-Incidente.png
     │        ├── E11_Escenario 1 SSH Brute Force.png
     │        ├── E12_Escenerio 2 Creación de usuario nuevo.png
-    │        └── E13_Escenario 3 File Integrity.png
+    │        └── E13_Escenario 3 Sudo Privilege Escalation.png
     └── semana3/                             ← (próximamente)
 
 ---
@@ -105,8 +105,8 @@
 | Creación de playbooks de respuesta automatizada | ✅ Completado |
 | Escenario 1: SSH Brute Force | ✅ Completado |
 | Escenario 2: Creación de usuario nuevo | ✅ Completado |
-| Escenario 3: File Integrity: modificar /etc/passwd | ✅ Completado |
-| Escenario 4: Sudo Privilege Escalation | ⏳ Pendiente |
+| Escenario 3: Sudo Privilege Escalation | ✅ Completado |
+| Escenario 4: File Integrity: modificar /etc/passwd | ⏳ Pendiente |
 | Escenario 5: Windows RDP Brute Force | ⏳ Pendiente |
 
 ### Semana 3: Análisis, Métricas y Reporte Final
@@ -135,7 +135,7 @@
 | E10 — PB-03 Ticket-Incidente | Captura ticket creado | ✅ |
 | E11 — Escenario 1: SSH Brute Force | Captura Wazuh - Kali | ✅ |
 | E12 — Escenario 2: Creación de usuario nuevo | Captura Wazuh - CLI Victim (SSH) | ✅ |
-| E13 — Escenario 3: File Integrity: modificar /etc/passwd | Captura Wazuh - CLI Victim (SSH) | ✅ |
+| E13 — Escenario 3: Sudo Privilege Escalation | Captura Wazuh - CLI Victim (SSH) | ✅ |
 
 ---
 
