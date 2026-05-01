@@ -20,17 +20,17 @@
     │       ├── E4_Agente win-victim activo.png
     │       └── E5_minisoc_lab.xml              ← 10 reglas de detección
     ├── semana2/                             
-    │    └── evidencias/
-    │        ├── E6_Shuffle_dashboard.png
-    │        ├── E7_Wazuh_Shuffle_Integration.png
-    │        ├── E8_PB-01 Bloqueo-IP.png
-    │        ├── E9_PB-02 Alerta-Email.png
-    │        ├── E10_PB-03 Ticket-Incidente.png
-    │        ├── E11_Escenario 1 SSH Brute Force.png
-    │        ├── E12_Escenerio 2 Creación de usuario nuevo.png
-    │        ├── E13_Escenario 3 Sudo Privilege Escalation.png
-    │        ├── E14_Escenario 4 File Integrity violation.png
-    │        └── E15_Escenario 5 RDP Brute Force.png
+    │   └── evidencias/
+    │       ├── E6_Shuffle_dashboard.png
+    │       ├── E7_Wazuh_Shuffle_Integration.png
+    │       ├── E8_PB-01 Bloqueo-IP.png
+    │       ├── E9_PB-02 Alerta-Email.png
+    │       ├── E10_PB-03 Ticket-Incidente.png
+    │       ├── E11_Escenario 1 SSH Brute Force.png
+    │       ├── E12_Escenerio 2 Creación de usuario nuevo.png
+    │       ├── E13_Escenario 3 Sudo Privilege Escalation.png
+    │       ├── E14_Escenario 4 File Integrity violation.png
+    │       └── E15_Escenario 5 RDP Brute Force.png
     └── semana3/                             ← (próximamente)
 
 ---
