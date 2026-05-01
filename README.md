@@ -13,12 +13,12 @@
     MiniSOC-Lab/
     ├── README.md
     ├── semana1/
-    │   ├── evidencias/             
-    │   │   ├── E1_DiagramaRed_SOC.png          ← Arquitectura del laboratorio
-    │   │   ├── E2_Dashboard Wazuh activo.png
-    │   │   ├── E3_Agente linux-victim activo.png
-    │   │   ├── E4_Agente win-victim activo.png
-    │   │   └── E5_minisoc_lab.xml              ← 10 reglas de detección
+    │   └── evidencias/             
+    │       ├── E1_DiagramaRed_SOC.png          ← Arquitectura del laboratorio
+    │       ├── E2_Dashboard Wazuh activo.png
+    │       ├── E3_Agente linux-victim activo.png
+    │       ├── E4_Agente win-victim activo.png
+    │       └── E5_minisoc_lab.xml              ← 10 reglas de detección
     ├── semana2/                             
     │    └── evidencias/
     │        ├── E6_Shuffle_dashboard.png
