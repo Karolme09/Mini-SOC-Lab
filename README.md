@@ -18,7 +18,6 @@
     │   │   ├── E2_Dashboard Wazuh activo.png
     │   │   ├── E3_Agente linux-victim activo.png
     │   │   ├── E4_Agente win-victim activo.png
-    │   │   ├── E4_Agente win-victim activo.png
     │   │   └── E5_minisoc_lab.xml              ← 10 reglas de detección
     ├── semana2/                             
     │    └── evidencias/
