@@ -42,8 +42,8 @@
 | VirtualBox | 7.2.8 r173730 |
 | Ubuntu (Wazuh Manager) | 24.04.4 LTS |
 | Ubuntu (Linux Victim) | 24.04.4 LTS |
-| Wazuh SIEM/SOAR | 4.14.5-1 |
-| Windows 10 (Win Victim) | Windows 11 Pro Versión 25H2 (OS Build 16200.8037) |
+| Wazuh | 4.14.5-1 |
+| Windows 11 (Win Victim) | Windows 11 Pro Versión 25H2 (OS Build 16200.8037) |
 | Kali Linux | 2026.1 |
 
 ---
