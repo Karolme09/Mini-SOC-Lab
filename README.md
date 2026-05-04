@@ -116,9 +116,7 @@
 ### Semana 3: Análisis, Métricas y Reporte Final
 | Tarea | Estado |
 |---|---|
-| Análisis de alertas y métricas | ⏳ Pendiente |
-| Mapeo MITRE ATT&CK | ⏳ Pendiente |
-| Reporte final con evidencias | ⏳ Pendiente |
+| Reporte final | ⏳ Pendiente |
 | Presentación del proyecto | ⏳ Pendiente |
 
 ---
