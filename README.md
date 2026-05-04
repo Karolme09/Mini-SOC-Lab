@@ -6,7 +6,7 @@
 |---|---|
 | **Autor** | Karol Melissa Chacon Sanchez |
 | **Fecha de inicio** | 20 de abril de 2026 |
-| **Objetivo** | Implementar en un entorno de laboratorio simulado un centro de operaciones de seguridad (SOC) utilizando herramientas como SIEM y SOAR donde detecte, clasifique y responda de manera automática a amenzas |
+| **Objetivo** | Implementar en un laboratorio virtualizado en VirtualBox un Mini SOC simulado mediante el uso de herramientas OpenSource con el fin de detectar, clasificar y responder de manera automática ante amenazas cibernéticas. |
 
 ---
 
@@ -31,7 +31,8 @@
     │       ├── E13_Escenario 3 Sudo Privilege Escalation.png
     │       ├── E14_Escenario 4 File Integrity violation.png
     │       └── E15_Escenario 5 RDP Brute Force.png
-    └── semana3/                             ← (próximamente)
+    └── semana3/     
+        └── Reporte final - MiniSoc_Lab                       
 
 ---
 
@@ -116,7 +117,7 @@
 ### Semana 3: Análisis, Métricas y Reporte Final
 | Tarea | Estado |
 |---|---|
-| Reporte final | ⏳ Pendiente |
+| Reporte final | ✅ Completado |
 | Presentación del proyecto | ⏳ Pendiente |
 
 ---
@@ -125,21 +126,22 @@
 
 | Entregable | Archivo | Estado |
 |---|---|---|
-| E1 — Diagrama de arquitectura de red | DiagramaRed_SOC | ✅ |
-| E2 — Dashboard Wazuh activo | Captura de pantalla | ✅ |
-| E3 — Agente linux-victim activo | Captura de pantalla | ✅ |
-| E4 — Agente win-victim activo | Captura de pantalla | ✅ |
-| E5 — 10 reglas XML de detección | minisoc_lab.xml | ✅ |
-| E6 — Shuffle SOAR instalado | Captura dashboard Shuffle | ✅ |
-| E7 — Integración Wazuh → Shuffle | Captura Workflow Runs | ✅ |
-| E8 — PB-01 Bloqueo-IP | Captura ejecución Shuffle | ✅ |
-| E9 — PB-02 Alerta-Email | Captura configuración del nodo | ✅ |
-| E10 — PB-03 Ticket-Incidente | Captura ticket creado | ✅ |
-| E11 — Escenario 1: SSH Brute Force | Captura Wazuh - Kali | ✅ |
-| E12 — Escenario 2: Creación de usuario nuevo | Captura Wazuh - CLI Victim (SSH) | ✅ |
-| E13 — Escenario 3: Sudo Privilege Escalation | Captura Wazuh - CLI Victim (SSH) | ✅ |
-| E14 — Escenario 4: File Integrity Violation | Captura Wazuh - CLI Victim (SSH) | ✅ |
-| E15 — Escenario 5: Windows RDP Brute Force | Captura Wazuh - Kali/Win-Victim (RDP) | ✅ |
+| E1 — Diagrama de arquitectura de red | E1_DiagramaRed_SOC.png | ✅ |
+| E2 — Dashboard Wazuh activo | E2_Dashboard Wazuh activo.jpeg | ✅ |
+| E3 — Agente linux-victim activo | E3_Agente linux-victim activo.png | ✅ |
+| E4 — Agente win-victim activo | E4_Agente win-victim activo.png | ✅ |
+| E5 — 10 reglas XML de detección | E5_minisoc_lab.xml | ✅ |
+| E6 — Shuffle SOAR instalado | E6_Shuffle dashboard.png | ✅ |
+| E7 — Integración Wazuh → Shuffle | E7_Wazuh_Shuffle_Integration.png | ✅ |
+| E8 — PB-01 Bloqueo-IP | E8_PB-01 Bloqueo-IP | ✅ |
+| E9 — PB-02 Alerta-Email | E9_PB-02 Alerta-Email.png | ✅ |
+| E10 — PB-03 Ticket-Incidente | E10_PB-03 Ticket-Incidente.jpeg | ✅ |
+| E11 — Escenario 1: SSH Brute Force | E11_Escenario 1 SSH Brute Force.png | ✅ |
+| E12 — Escenario 2: Creación de usuario nuevo | E12_Escenario 2 Creación de usuario nuevo.png | ✅ |
+| E13 — Escenario 3: Sudo Privilege Escalation | E13_Escenario 3 Sudo Privilege Escalation.png | ✅ |
+| E14 — Escenario 4: File Integrity Violation | E14_Escenario 4 File Integrity violation.png | ✅ |
+| E15 — Escenario 5: Windows RDP Brute Force | E15_Escenario 5 RDP Brute Force.png | ✅ |
+| E16 — Reporte final | E16_Reporte Final - MiniSoc_Lab.docx | ✅ |
 
 ---
 
