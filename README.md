@@ -1,4 +1,4 @@
-# Mini-SOC automatizado con IA para la detección y respuesta a amenazas
+# Mini-SOC:  detección y respuesta automatizada a amenazas
 
 ## Información del Proyecto
 
